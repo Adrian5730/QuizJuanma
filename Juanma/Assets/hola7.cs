@@ -46,6 +46,20 @@ public class hola7 : MonoBehaviour
             esferasLink[i] = Random.Range(10, 31);
             int[] puntajeRonda = new int[4] { esferasMario[i], esferasKong[i], esferasPikachu[i], esferasLink[i] };
 
+            var rondasGanadasMario = 0;
+            var rondasGanadasKong = 0;
+            var rondasGandasPikachu = 0;
+            var rondasGanadsLink = 0;
+            var GanadorDeRonda = "";
+            var mayor = 0;
+            for (int a = 0; a < puntajeRonda[i]; a++)
+            {
+                if (puntajeRonda[a] > mayor)
+                {
+                    mayor = puntajeRonda[a];
+                    Debug.Log("El puntaje mayor de la ronda numero " + a + " fue " + mayor);
+                }
+            }
            
 
             // a. Cuantas esferas en total recolectaron todos los personajes en cada turno
